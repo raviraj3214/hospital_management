@@ -1,0 +1,79 @@
+{% extends 'hospital/admin_base.html' %} {% block content %} {% load static %}
+
+<head>
+  <meta charset="utf-8">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static '/admin_doctor.css' %}"
+/>
+
+  
+</head>
+
+
+<br /><br /><br /><br />
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-xl-3">
+      <div class="card bg-c-blue order-card" style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);">
+        <div class="card-block">
+          <a href="/admin-view-doctor">
+            <h6 class="m-b-20">Doctor Record</h6>
+          </a>
+          <br />
+          <h2 class="text-right"><i class="fas fa-user-nurse f-left"></i></h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xl-3">
+      <div class="card bg-c-green order-card" style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);">
+        <div class="card-block">
+          <a href="/admin-add-doctor">
+            <h6 class="m-b-20">Register Doctor</h6>
+          </a>
+          <br />
+          <h2 class="text-right"><i class="fas fa-user-plus f-left"></i></h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xl-3">
+      <div class="card bg-c-yellow order-card" style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);">
+        <div class="card-block">
+          <a href="/admin-approve-doctor">
+            <h6 class="m-b-20">Approve Doctor</h6>
+          </a>
+          <br />
+          <h2 class="text-right"><i class="fas fa-check-circle f-left"></i></h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 col-xl-3">
+      <div class="card bg-c-pink order-card" style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);">
+        <div class="card-block">
+          <a href="/admin-view-doctor-specialisation">
+            <h6 class="m-b-20">Doctor Specialisation</h6>
+          </a>
+          <br />
+          <h2 class="text-right"><i class="fas fa-user-md f-left"></i></h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+  developed By : Ravi Raj
+  -->
+<br /><br /><br /><br /><br /><br /><br />
+{% endblock content %}

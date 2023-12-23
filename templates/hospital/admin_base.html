@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ravi Raj</title>
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   
+
+    {% comment %} <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> {% endcomment %}
+<!------ Include the above in your HEAD tag ---------->
+
+{% comment %} <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ----------> {% endcomment %}
+
+{% comment %} <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> {% endcomment %}
+<link
+rel="stylesheet"
+type="text/css"
+href="{% static '/admin_base.css' %}"
+/>
+<link
+rel="stylesheet"
+type="text/css"
+href="{% static '/sidebar.css' %}"
+/>
+
+    {% comment %} 
+    <style media="screen"></style>
+    {% endcomment %}
+ 
+  </head>
+
+<body>
+  <div class="" style="display:block;width:100%;height:100%;">
+    <div class="kukabura">
+       {% comment %} <nav class="menu navbar-dark" tabindex="0" style="top:0;">
+        <header class="avatar">
+          <img src="{% static "images/adminpropic.png" %}" />
+          <br /><br />
+          <h2 style="color: #ffffff;margin:0;margin-top:4px;font-weight: normal;">Admin</h2>
+          <h2 style="color: #ffffff;margin:0;margin-top:4px;font-weight: normal;">{{request.user.first_name}}</h2>
+        </header>
+        <ul>
+          <li tabindex="0" class="icon-dashboard nav-item">
+            <a style="color: white" class="nav-link" href="/admin-dashboard"
+              ><span>Dashboard</span></a
+            >
+          </li>
+          <li tabindex="0" class="icon-customers nav-item">
+            
+            <a href="#sidemenu" data-bs-toggle="collapse" class="nav-link" style="color: white; text-decoration: none">
+              <span>Doctor</span>
+          </a>
+          <ul class="nav collapse ms-1 flex-column" id="sidemenu" data-bs-parent="#menu">
+           <li class="nav-item"> <a class="nav-link" href="/admin-view-doctor">Doctor Record</a> </li>
+           <li class="nav-item"> <a class="nav-link" href="/admin-add-doctor">Register Doctor</a> </li>
+            <li class="nav-item"> <a class="nav-link" href="/admin-approve-doctor">Approve Doctor</a> </li>
+           <li class="nav-item"> <a class="nav-link" href="/admin-view-doctor-specialisation">Doctor Specialisation</a> </li>
+            <!-- Add more dropdown items as needed -->
+           </ul>
+          </li>
+          
+          
+          <li tabindex="0" class="icon-users nav-item">
+            <a
+              style="color: white; text-decoration: none"
+              class="nav-link"
+              href="/admin-patient"
+              ><span>Patient</span></a
+            >
+          </li>
+          <li tabindex="0" class="icon-calendar nav-item">
+            <a
+              style="color: white; text-decoration: none"
+              class="nav-link"
+              href="/admin-appointment"
+              ><span>Appointment</span></a
+            >
+          </li>
+        </ul>
+      </nav> {% endcomment %}
+       <div class="nav-side-menu">
+        <div class="brand">Hospital Management</div>
+        <header class="avatar">
+          <img src="{% static "images/adminpropic.png" %}" />
+          <br /><br />
+          <h2 style="color: #ffffff;margin:0;margin-top:4px;font-weight: normal;">Admin</h2>
+          <h2 style="color: #ffffff;margin:0;margin-top:4px;font-weight: normal;">{{request.user.first_name}}</h2>
+        </header>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+      
+            <div class="menu-list">
+      
+                <ul id="menu-content" class="menu-content collapse out">
+                    <li>
+                      <a href="/admin-dashboard">
+                      <i class="fa fa-dashboard fa-lg"></i> Dashboard
+                      </a>
+                    </li>
+    
+                    <li  data-toggle="collapse" data-target="#products" class="icon-customers collapsed">
+                      {% comment %} <a href="#"><i class="fa fa-user-md fa-lg"></i> Doctor <span class="arrow"></span></a> {% endcomment %}
+                      <a href="#"><i class="fa fa-user-md fa-lg"></i> Doctor <span class=""></span></a>
+
+                    </li>
+                    <ul class="sub-menu collapse" id="products">
+                        <li><a href="/admin-view-doctor">Doctor Record</a></li>
+                        <li><a href="/admin-add-doctor">Register Doctor</a></li>
+                        <li><a href="/admin-approve-doctor">Approve Doctor</a></li>
+                        <li><a href="/admin-view-doctor-specialisation">Doctor Specialisation</a></li>
+                    </ul>
+    
+    
+                    <li data-toggle="collapse" data-target="#service" class="collapsed">
+                      <a href="#"><i class="fa fa-wheelchair fa-lg"></i> Patient <span class=""></span></a>
+                    </li>  
+                    <ul class="sub-menu collapse" id="service">
+                      <li><a href="/admin-view-patient">Patient Record</a></li>
+                      <li><a href="/admin-add-patient">Admint Patient</a></li>
+                      <li><a href="/admin-approve-patient">Approve Patient</a></li>
+                      <li><a href="/admin-discharge-patient">Discharge Patient</a></li>
+                    </ul>
+    
+    
+                    <li data-toggle="collapse" data-target="#new" class="collapsed">
+                      <a href="#"><i class="fa fa-calendar-check-o fa-lg"></i> Appointment <span class=""></span></a>
+                    </li>
+                    <ul class="sub-menu collapse" id="new">
+                      <li><a href="/admin-view-doctor">View Appointment</a></li>
+                      <li><a href="/admin-add-appointment">Book Appointment</a></li>
+                      <li><a href="/admin-approve-appointment">Approve Appointment</a></li>
+                    </ul>    
+                </ul>
+         </div>
+    </div> 
+
+
+    </div>
+
+    {% comment %}
+    <div
+      class=""
+      style="
+        background: linear-gradient(
+          90deg,
+          rgba(67, 133, 218, 1) 7%,
+          rgba(221, 46, 227, 1) 16%,
+          rgba(67, 42, 251, 1) 24%,
+          rgba(160, 136, 247, 1) 34%,
+          rgba(64, 94, 226, 1) 41%,
+          rgba(128, 68, 251, 1) 46%,
+          rgba(129, 50, 201, 1) 56%,
+          rgba(215, 115, 248, 1) 70%,
+          rgba(209, 148, 229, 1) 78%,
+          rgba(209, 117, 241, 1) 91%
+        );
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+      "
+    >
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <a href="/admin-dashboard" class="navbar-brand">HOSPITAL MANAGEMENT</a>
+        <div class="collapse justify-content-between">
+          <div class="navbar-nav" style="margin-left: 90%">
+            <a href="/logout" class="nav-item nav-link">Logout</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    {% endcomment %}
+    
+      <nav
+        class="navbar navbar-expand-md navbar-dark fixed-top"
+        style="
+        background: linear-gradient(
+          90deg,
+          rgb(9 24 43) 7%,
+          rgb(34 9 34) 16%,
+          rgb(6 3 31) 24%,
+          rgb(33 23 69) 34%,
+          rgb(9 13 30) 41%,
+          rgb(34 10 83) 46%,
+          rgb(29 7 48) 56%,
+          rgb(15 2 20) 70%,
+          rgb(31 21 34) 78%,
+          rgb(29 3 38) 91%
+        );
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+          width:85.7%;
+          margin-left:241px;
+          height:7%;
+        "
+      >
+        <a href="/admin-dashboard" class="navbar-brand">HOSPITAL MANAGEMENT</a>
+        
+        <div class="collapse navbar-collapse" style="margin-left:76%;">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="/logout" class="nav-link">Logout</a>
+            </li>
+          </ul>
+        </div>
+     
+      </nav>
+
+
+    <div style="display:block;height:94%;width:85.6%;margin-left:241px;">
+      
+      <!-- content start-->
+      {% block content %} {% endblock content %}
+      <!-- content end-->
+      <br /><br />
+      <footer style="height:20%">
+        <p style="margin:0 10% 0 0;">
+          <a
+            id="ftr"
+            href="https://facebook.com/sumit.luv/"
+            class="fa fa-facebook"
+          ></a>
+          <a
+            id="ftr"
+            href="https://api.whatsapp.com/send?phone=919572181024&text=Hello%20Sumit.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#"
+            class="fa fa-whatsapp"
+          ></a>
+          <a
+            id="ftr"
+            href="https://instagram.com/sumit.luv"
+            class="fa fa-instagram"
+          ></a>
+          <a
+            id="ftr"
+            href="https://twitter.com/sumitkumar1503"
+            class="fa fa-twitter"
+          ></a>
+        </p>
+
+        <div class="fots" style="width:100%;margin:10px 0 0 0;">
+          <div class="">
+            <div class="">
+              <div style="color: #ffffff;margin-right:10%;" class="wow fadeInUp footer-copyright">
+                <p>
+                  Made in India <br />
+                  Developer Ravi Raj
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  </body>
+</html>
