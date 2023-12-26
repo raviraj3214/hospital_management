@@ -1,14 +1,17 @@
 #!/bin/sh
 
 # ssh root@178.16.137.56 <<EOF
-  cd hospital_management
+  pwd
   git pull 
   source env/bin/activate
   pip install -r requirement.txt
   python manage.py makemigrations
   python manage.py migrate
   sudo systemctl restart nginx
-  sudo service gunicorn restart
+  sudo systemctl daemon-reload
+  sudo systemctl restart gunicorn.socket
+  sudo systemctl restart gunicorn.service
   sudo service nginx restart
+  sudo systemctl restart nginx
   exit
 EOF
