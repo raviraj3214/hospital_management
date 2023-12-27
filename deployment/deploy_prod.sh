@@ -9,8 +9,8 @@
   python manage.py migrate
   sudo systemctl restart nginx
   sudo systemctl daemon-reload
-  sudo systemctl restart gunicorn.socket
-  sudo systemctl restart gunicorn.service
+  sudo systemctl restart hospital.gunicorn.socket
+  sudo systemctl restart hospital.gunicorn.service
   sudo service nginx restart
   sudo systemctl restart nginx
   exit
