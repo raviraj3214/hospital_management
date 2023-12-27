@@ -123,7 +123,7 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [
-    '/var/lib/jenkins/workspace/static/',
+    '/var/lib/jenkins/workspace/Hospital/static/',
 ]
 
 STATIC_ROOT = "/root/Hospital/static/"
