@@ -12,8 +12,8 @@ from django.contrib import admin
 from django.urls import path
 from hospital import views
 from django.contrib.auth.views import LoginView,LogoutView
-from django.conf import settings
-from django.conf.urls.static import static
+# from django.conf import settings
+# from django.conf.urls.static import static
 
 
 #-------------FOR ADMIN RELATED URLS
@@ -109,6 +109,6 @@ urlpatterns +=[
 
 ]
 
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# if settings.DEBUG:
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 #Developed By : Ravi Raj
