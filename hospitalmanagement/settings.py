@@ -122,6 +122,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = "static/"
+STATICFILES_DIRS = [
+    '/var/lib/jenkins/workspace/static/',
+]
 
 STATIC_ROOT = "/root/Hospital/static/"
 
