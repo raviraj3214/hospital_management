@@ -4,6 +4,11 @@
 {% block content %}
 
 <head>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  
   <style media="screen">
     a:link {
       text-decoration: none;
@@ -44,16 +49,13 @@
   </style>
   {% load static %}
 
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+ 
 </head>
 <br><br><br>
 <!------ signup page for doctor by admin(Ravi)  ---------->
-<form method="post" enctype="multipart/form-data">
+<form method="post" class="container" enctype="multipart/form-data">
   {% csrf_token %}
-  <div class="container register-form">
+  <div class="register-form">
     <div class="form">
       <div class="note">
         <p>Add New Doctor To Hospital</p>
