@@ -116,7 +116,7 @@
 </head>
 
 <body>
-  {% include "hospital/navbar.html" %}
+  <div style="margin-bottom:5%;">{% include "hospital/navbar.html" %}</div>
   <br />
   <br />
   <br /><br />
@@ -125,7 +125,7 @@
   <form method="post" class="container register-form">
     {% csrf_token %}
     <div class="form card shadow-md ">
-      <div class="alert alert-info note bg-primary text-white text-center font-weight-bold" role="alert">
+      <div class="alert alert-info note bg-primary text-white text-center font-weight-bold" role="alert" style="width:100%;">
         Admin Login Page
       </div>
 
