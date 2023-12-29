@@ -20,6 +20,7 @@
 
     .note {
       text-align: center;
+      justify-content: center;
       height: 60px;
       background: -webkit-linear-gradient(left, #0072ff, #8811c5);
       color: #fff;
@@ -55,7 +56,7 @@
   {% include "hospital/navbar.html" %}
 
   <!--- signup page for patient by admin(Ravi Raj)  ---------->
-  <form method="post" enctype="multipart/form-data" style="margin-top:3%;">
+  <form method="post" enctype="multipart/form-data" style="margin-top:5%;">
     {% csrf_token %}
     <div class="container register-form" style="margin-bottom:0px;height:62vh;width:100%>
       <div class="form">
@@ -105,7 +106,7 @@
     </div>
 
   </form>
-<div style="margin-top:3%;"></div>
+<div style="margin-top:1%;"></div>
   {% include "hospital/footer.html" %}
 </body>
 <!--
