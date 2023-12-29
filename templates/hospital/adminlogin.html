@@ -117,12 +117,10 @@
 
 <body>
   {% include "hospital/navbar.html" %}
-  
-  
   <!--- login page for admin by admin(Ravi Raj)  ---------->
   <form method="post" class="container register-form" style="margin-top:10.4%;">
     {% csrf_token %}
-    <div class="form card shadow-md ">
+    <div class="form card shadow-md">
       <div class="alert alert-info note bg-primary text-white text-center font-weight-bold" role="alert" style="width:100%;">
         Admin Login Page
       </div>
