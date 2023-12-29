@@ -53,16 +53,8 @@
 
 <body>
   {% include "hospital/navbar.html" %}
-  <br>
-  <br>
-  <br>
-  <br>
-
-
-
-
   <!--- signup page for doctor by admin(Ravi Raj)  ---------->
-  <form method="post" enctype="multipart/form-data">
+  <form method="post" enctype="multipart/form-data" style="margin-top:5%;">
     {% csrf_token %}
     <div class="container register-form" style="margin-bottom:0px;height:62vh;width:100%">
       <div class="form">
@@ -110,8 +102,9 @@
     </div>
 
   </form>
-
-  {% include "hospital/footer.html" %}
+  <div style="margin-top:1%;">
+    {% include "hospital/footer.html" %}
+  </div>
 </body>
 <!--
 developed By : Ravi Raj
