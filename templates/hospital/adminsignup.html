@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-
 {% load widget_tweaks %}
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Ravi Raj</title>
+  
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
   <style type="text/css">
     body {
       color: #aa082e;
@@ -47,20 +48,13 @@
       color: #fff;
     }
   </style>
-
 </head>
-
-
 <body>
   {% include "hospital/navbar.html" %}
   <br />
   <br />
   <br />
   <br />
-
-
-
-
   <!--- signup page for admin by admin(Ravi Raj)  ---------->
   <form method="post">
     {% csrf_token %}
@@ -69,7 +63,6 @@
         <div class="note">
           <p>Add New Admin To Hospital</p>
         </div>
-
         <div class="form-content">
           <div class="row">
             <div class="col-md-6">
@@ -79,7 +72,6 @@
               <div class="form-group">
                 {% render_field form.username class="form-control" placeholder="Username" %}
               </div>
-
             </div>
             <div class="col-md-6">
               <div class="form-group">
@@ -88,7 +80,6 @@
               <div class="form-group">
                 {% render_field form.password class="form-control" placeholder="Password" %}
               </div>
-
             </div>
           </div>
           <button type="submit" class="btnSubmit">Submit</button>
@@ -96,13 +87,12 @@
         </div>
       </div>
     </div>
-
   </form>
   <!--
   developed By : Ravi Raj
   -->
-
   {% include "hospital/footer.html" %}
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </body>
-
 </html>
