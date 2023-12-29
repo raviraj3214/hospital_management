@@ -319,7 +319,7 @@ href="{% static '/sidebar.css' %}"
     <div class="nav-side-menu">
       <div class="brand">Hospital Management</div>
       <header class="avatar">
-        <img src="{% static patient.profile_pic.url %}" alt="Profile Pic" />
+        <img src="{{ patient.profile_pic.url }}" alt="Profile Pic" />
         <br><br>
         <h6 style="color: #ffffff;margin:0;margin-top:4px;font-weight: normal;">Patient</h6>
         <h2 style="color: #ffffff;margin:0;margin-top:4px;font-weight: normal;">{{request.user.first_name}}</h2>
