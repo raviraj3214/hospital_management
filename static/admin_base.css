@@ -7,7 +7,7 @@ a:link {
   }
 
   a:hover {
-    color: white;
+    color: rgb(127, 134, 195);
   }
 
   .sutu {
@@ -49,7 +49,7 @@ a:link {
   }
 
   .fa {
-
+    padding: 20px;
     font-size: 23px;
     width: 60px;
     text-align: center;
