@@ -1,7 +1,7 @@
 #!/bin/sh
-  cd /root
+  cd /root/Hospital
   pwd
-  git pull 
+  git pull origin main
   # source env/bin/activate
   # pip install -r requirement.txt
   # python manage.py makemigrations
