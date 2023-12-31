@@ -139,7 +139,7 @@ node {
         }
 
         stage('Deploy') {
-            sh 'cd .. & pwd & ls & ./deploy.sh'
+            sh 'cd .. && pwd && ls && ./deploy.sh'
         }
     } catch (err) {
         throw err
