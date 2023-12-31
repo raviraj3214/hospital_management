@@ -1,8 +1,7 @@
 #!/bin/sh
-  cd /root/Hospital
   pwd
-  ls
-  # source env/bin/activate
+  virtualenv env
+  source env/bin/activate
   # pip install -r requirement.txt
   # python manage.py makemigrations
   # python manage.py migrate
