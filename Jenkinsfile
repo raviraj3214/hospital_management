@@ -139,7 +139,7 @@ node {
         }
 
         stage('Deploy') {
-            chmod +x ./deployment/deploy_prod.sh
+            sh 'chmod +x ./deployment/deploy_prod.sh'
             sh './deployment/deploy_prod.sh'
         }
     } catch (err) {
