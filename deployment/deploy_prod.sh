@@ -1,5 +1,5 @@
 #!/bin/sh
-
+  cd /root
   pwd
   git pull 
   # source env/bin/activate
