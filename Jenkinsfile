@@ -130,6 +130,24 @@
 
 
 
+// node {
+//     try {
+//         stage('Checkout') {
+//             checkout scm
+//             sh 'git log HEAD^..HEAD --pretty="%h %an - %s" > GIT_CHANGES'
+//             def lastChanges = readFile('GIT_CHANGES')
+//         }
+
+//         stage('Deploy') {
+//             sh 'cd .. && pwd && ls && ./deploy.sh'
+//         }
+//     } catch (err) {
+//         throw err
+//     }
+// }
+
+
+
 node {
     try {
         stage('Checkout') {
@@ -139,10 +157,14 @@ node {
         }
 
         stage('Deploy') {
-            sh 'cd .. && pwd && ls && ./deploy.sh'
+            // Assuming your private key is stored in Jenkins credentials with ID 'my_ssh_key'
+            withCredentials([sshUserPrivateKey(credentialsId: 'my_ssh_key', keyFileVariable: 'SSH_KEY')]) {
+                sh 'cd .. && pwd && ls && SSH_KEY=${SSH_KEY} ./deploy.sh'
+            }
         }
     } catch (err) {
         throw err
     }
 }
+
 
