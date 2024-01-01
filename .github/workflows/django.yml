@@ -20,6 +20,15 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies
       run: |
+        python3 venv env
+        source env/bin/activate
         python -m pip install --upgrade pip
         pip install -r requirement.txt
+        python manage.py makemigrations
+        python manage.py migrate
+        python manage.py collectstatic --noinput
+        deactivate
+        sudo systemctl reload nginx
+        sudo systemctl restart hospital.gunicorn
+        
         
